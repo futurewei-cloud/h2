@@ -43,8 +43,10 @@ members = [
 futures-core = { version = "0.3", default-features = false }
 futures-sink = { version = "0.3", default-features = false }
 futures-util = { version = "0.3", default-features = false }
-tokio-util = { git = "https://github.com/futurewei-cloud/tokio", branch = "wasmdev",  features = ["codec"] }
-tokio = { git = "https://github.com/futurewei-cloud/tokio", branch = "wasmdev",  features = ["io-util"] }
+# tokio-util = { git = "https://github.com/futurewei-cloud/tokio", branch = "wasmdev",  features = ["codec"] }
+# tokio = { git = "https://github.com/futurewei-cloud/tokio", branch = "wasmdev",  features = ["io-util"] }
+tokio-util = { path = "../tokio/tokio-util", features = ["codec"] }
+tokio = { path = "../tokio/tokio",  features = ["io-util"] }
 bytes = "1"
 http = "0.2"
 tracing = { version = "0.1.21", default-features = false, features = ["std"] }
@@ -65,7 +67,8 @@ serde = "1.0.0"
 serde_json = "1.0.0"
 
 # Examples
-tokio = { git = "https://github.com/futurewei-cloud/tokio", branch = "wasmdev",  features = ["rt", "macros", "sync", "net"] }
+# tokio = { git = "https://github.com/futurewei-cloud/tokio", branch = "wasmdev",  features = ["rt", "macros", "sync", "net"] }
+tokio = { path = "../tokio/tokio", features = ["rt", "macros", "sync", "net"] }
 env_logger = { version = "0.9", default-features = false }
 tokio-rustls = "0.23.2"
 webpki-roots = "0.22.2"
