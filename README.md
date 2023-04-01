@@ -1,3 +1,5 @@
+"This Project has been archived by the owner, who is no longer providing support.  The project remains available to authorized users on a "read only" basis."
+
 # H2
 
 A Tokio aware, HTTP/2 client & server implementation for Rust.
